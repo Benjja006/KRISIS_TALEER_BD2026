@@ -13,17 +13,18 @@ DECLARE
         'Trap',
         'Electronica'
     );
-BEGIN   
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('---GENEROS MUSICALES DISPONIBLES---');
     DBMS_OUTPUT.PUT_LINE(V_GENEROS(1));
-    DBMS_OUTPUT.PUT_LINE(V_GENEROS(2));
+    DBMS_OUTPUT.PUT_LINE(V_GENEROS(7));
     DBMS_OUTPUT.PUT_LINE(V_GENEROS(3));
     DBMS_OUTPUT.PUT_LINE(V_GENEROS(4));
-    DBMS_OUTPUT.PUT_LINE(V_GENEROS(5));
+    DBMS_OUTPUT.PUT_LINE(V_GENEROS(6));
 
 
 EXCEPTION
     WHEN SUBSCRIPT_OUTSIDE_LIMIT  THEN 
-        DBMS_OUTPUT.PUT_LINE('Error, se trató de acceder a uns posición inexistente');
+        DBMS_OUTPUT.PUT_LINE('Error, se trató de acceder a una posición inexistente');
 
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE('ERROR DESCONOCIDO');
