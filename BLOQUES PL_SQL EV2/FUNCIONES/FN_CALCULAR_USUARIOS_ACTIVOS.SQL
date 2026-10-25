@@ -38,3 +38,5 @@ EXCEPTION
         RAISE_APPLICATION_ERROR(-20002, 'Error interno en fn_porcentaje_usuarios_activos: ' || SQLERRM);
 END fn_porcentaje_usuarios_activos;
 /
+
+SELECT fn_porcentaje_usuarios_activos() AS porcentaje_activos FROM dual;

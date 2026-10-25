@@ -60,3 +60,5 @@ EXCEPTION
         );
 END sp_reporte_usuarios_premium;
 /
+
+EXEC SP_REPORTE_USUARIOS_PREMIUM;
