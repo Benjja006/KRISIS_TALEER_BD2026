@@ -12,3 +12,7 @@ BEGIN
     :NEW.email := LOWER(REPLACE(:NEW.email, ' ', ''));
 END trg_limpiar_datos_usuario;
 /
+
+SELECT trigger_name, status
+FROM user_triggers
+WHERE trigger_name = 'TRG_LIMPIAR_DATOS_USUARIO';
