@@ -61,4 +61,9 @@ EXCEPTION
 END sp_reporte_usuarios_premium;
 /
 
-EXEC SP_REPORTE_USUARIOS_PREMIUM;
+SELECT
+    COUNT(*) AS total_usuarios,
+    SUM(CASE WHEN es_premium = '1' THEN 1 ELSE 0 END) AS usuarios_premium,
+    SUM(CASE WHEN es_premium = '0' THEN 1 ELSE 0 END) AS usuarios_gratis
+FROM usuario;
+/
